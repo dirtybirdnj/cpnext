@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { MetaProps } from '../types/layout';
 import Head from './Head';
 import Navigation from './Navigation';
@@ -28,12 +29,9 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
       </main>
       <footer className="py-8">
         <div className="max-w-5xl px-8 mx-auto">
-          <a
-            className="text-gray-900 dark:text-white"
-            href="https://www.vtapi.co"
-          >
-            vtapi.co
-          </a>
+          <Link href="https://www.vtapi.co" passHref>
+            <p className="text-slate-50 dark:text-white">vtapi.co</p>
+          </Link>
         </div>
       </footer>
     </>
